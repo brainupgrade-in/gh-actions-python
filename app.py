@@ -66,6 +66,8 @@ def get_current_temperature(latitude, longitude):
         current_weather = data.get('current', {})
         return current_weather.get('temperature')
     except requests.RequestException as e:
+
+print("Testing")
         print(f"An error occurred while fetching temperature: {e}")
         return jsonify(error=str(e)), 500
         
